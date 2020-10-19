@@ -7,28 +7,28 @@ export default class SiteBar extends Component {
          <aside className={Style.body}>
             <nav className={Style.menu}>
                <div className={Style.list}>
-                  <a href='#' className={Style.link}>
+                  <a href='/profile' className={Style.link}>
                      <p>Профиль</p>
                   </a>
-                  <a href='#' className={Style.link}>
+                  <a href='/news' className={Style.link}>
                      <p>Новости</p>
                   </a>
-                  <a href='#' className={Style.link}>
+                  <a href='/message' className={Style.link}>
                      <p>Сообщения</p>
                   </a>
-                  <a href='#' className={Style.link}>
+                  <a href='/communities' className={Style.link}>
                      <p>Сообщества</p>
                   </a>
-                  <a href='#' className={Style.link}>
+                  <a href='/friends' className={Style.link}>
                      <p>Друзья</p>
                   </a>
-                  <a href='#' className={Style.link}>
+                  <a href='/music' className={Style.link}>
                      <p>Музыка</p>
                   </a>
-                  <a href='#' className={Style.link}>
+                  <a href='/video' className={Style.link}>
                      <p>Видео</p>
                   </a>
-                  <a href='#' className={Style.link}>
+                  <a href='/photos' className={Style.link}>
                      <p>Фотографии</p>
                   </a>
                </div>

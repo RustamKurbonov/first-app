@@ -10,10 +10,10 @@ export default class Post extends Component {
             </div>
             <div className={Style.body}>
                <div className={Style.name}>
-                  <a href='#'><p>Name</p></a>
+                  <a href='#'><p>{this.props.nameUser}</p></a>
                </div>
                <div className={Style.text}>
-                  <p>S946O0s3sF2 jMTlf8XPPdNSS 6njLZAn4gOVr 4scEHg7B1VF njbGd1GM4HN aKX3Uy2EArm1NeG6 rtp1OpSRbtqRM 6Chb6bxoUTqW ZyDG 8</p>
+                  <p>{this.props.message}</p>
                </div>
                <div className={Style.like}>
                   <button className={Style.btn}>LIKE</button>

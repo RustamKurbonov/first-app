@@ -15,12 +15,15 @@
    border-bottom: 1px solid #edeef0;
    padding: 0px 0px 20px 0px;
 }
-.top {
-}
 .text {
+   margin: 15px 0px 0px 0px;
+   padding: 10px;
    border: 1px solid #2a5885;
    display: block;
    width: 100%;
+   height: 45px;
+   resize: none;
+   overflow : auto;
 }
 .btn {
    margin: 15px 0px 0px 0px;
@@ -30,7 +33,4 @@
    font-size: 16px;
    height: 35px;
    width: 120px;
-}
-.bottom {
-
 }
