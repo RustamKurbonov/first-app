@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 import Style from './SiteBar.module.css'
 
 export default class SiteBar extends Component {
@@ -7,30 +8,30 @@ export default class SiteBar extends Component {
          <aside className={Style.body}>
             <nav className={Style.menu}>
                <div className={Style.list}>
-                  <a href='/profile' className={Style.link}>
+                  <NavLink to='/profile' activeClassName={Style.active} className={Style.link}>
                      <p>Профиль</p>
-                  </a>
-                  <a href='/news' className={Style.link}>
+                  </NavLink>
+                  <NavLink to='/news' activeClassName={Style.active} className={Style.link}>
                      <p>Новости</p>
-                  </a>
-                  <a href='/message' className={Style.link}>
+                  </NavLink>
+                  <NavLink to='/message' activeClassName={Style.active} className={Style.link}>
                      <p>Сообщения</p>
-                  </a>
-                  <a href='/communities' className={Style.link}>
+                  </NavLink>
+                  <NavLink to='/communities' activeClassName={Style.active} className={Style.link}>
                      <p>Сообщества</p>
-                  </a>
-                  <a href='/friends' className={Style.link}>
+                  </NavLink>
+                  <NavLink to='/friends' activeClassName={Style.active} className={Style.link}>
                      <p>Друзья</p>
-                  </a>
-                  <a href='/music' className={Style.link}>
+                  </NavLink>
+                  <NavLink to='/music' activeClassName={Style.active} className={Style.link}>
                      <p>Музыка</p>
-                  </a>
-                  <a href='/video' className={Style.link}>
+                  </NavLink>
+                  <NavLink to='/video' activeClassName={Style.active} className={Style.link}>
                      <p>Видео</p>
-                  </a>
-                  <a href='/photos' className={Style.link}>
+                  </NavLink>
+                  <NavLink to='/photos' activeClassName={Style.active} className={Style.link}>
                      <p>Фотографии</p>
-                  </a>
+                  </NavLink>
                </div>
             </nav>
          </aside>

@@ -14,6 +14,9 @@ ul li{list-style: none;}
 img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 
+body {
+   background-color: #edeef0;
+}
 .container{
    max-width: 1250px; 
    margin: 0px auto;
@@ -31,5 +34,4 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
    width: 100%;
    min-height: 100%;
    overflow: hidden;
-   background-color: #edeef0;
 }
