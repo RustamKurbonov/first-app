@@ -1,0 +1,28 @@
+.post{
+   margin: 20px 0px 0px 0px;
+   display: flex;
+   background-color: rgb(226, 240, 240);
+   height: 150px;
+   padding: 20px;
+}
+.icon{
+   max-width: 70px;
+}
+.icon img {
+   max-width: 100%;
+}
+.body{
+   padding: 0px 0px 0px 15px;
+}
+.name{
+   font-size: 18px;
+   font-weight: 600;
+   margin: 0px 0px 15px 0px;
+}
+.like{
+   margin: 15px 0px 0px 0px;
+}
+.btn{
+   font-size: 16px;
+   font-weight: 500;
+}
