@@ -1,0 +1,22 @@
+.body {
+   grid-area: site-bar;
+}
+.menu {
+height: 600px;
+}
+.link {
+   display: flex;
+   flex-direction: column;
+   height: 25px;
+   justify-content: center;
+   margin: 0px 0px 10px 0px;
+   padding: 0px 0px 0px 15px;
+} 
+.link:hover {
+   background-color: #d3d9de;
+}
+.link p {
+   font-size: 18px;
+   font-weight: 500;
+   color: #4189c8;
+} 
