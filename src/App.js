@@ -14,7 +14,7 @@ import Video from './components/Video/Video'
 import Photos from './components/Photos/Photos'
 import { BrowserRouter, Route } from 'react-router-dom';
 
-const App = () => {
+const App = (props) => {
   return (
     <BrowserRouter>
       <div className='wrapper'>
@@ -22,14 +22,14 @@ const App = () => {
           <Header />
           <SiteBar />
           <div className='sectionContent'>
-            <Route path='/profile' component={Profile} />
-            <Route path='/news' component={News} />
-            <Route path='/message' component={Message} />
-            <Route path='/communities' component={Communities} />
-            <Route path='/friends' component={Friends} />
-            <Route path='/music' component={Music} />
-            <Route path='/video' component={Video} />
-            <Route path='/photos' component={Photos} />
+            <Route path='/profile' render={() => <Profile posts={props.posts} descripcion={props.descripcion}/>}/>
+            <Route path='/news' render={() => <News />}/>
+            <Route path='/message' render={() => <Message users={props.users} messangs={props.messangs}/>}/>
+            <Route path='/communities' render={() => <Communities />} />
+            <Route path='/friends' render={() => <Friends />} />
+            <Route path='/music' render={() => <Music />} />
+            <Route path='/video' render={() => <Video />} />
+            <Route path='/photos' render={() => <Photos />} />
           </div>
         </div>
       </div>

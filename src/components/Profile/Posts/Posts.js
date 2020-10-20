@@ -3,13 +3,8 @@ import Post from './Post/Post'
 import Style from './Posts.module.css'
 
 export default function Posts(props) {
-   let posts = [
-      { name: 'Alexey', message: 'Это я' },
-      { name: 'Andrey', message: 'Привет, это второй пост' },
-      { name: 'Dima', message: 'Еще один пост' }
-   ];
-
-   let postElement = posts.map(p => <Post nameUser={p.name} message={p.message} />);
+   
+   let postElement = props.posts.map(p => <Post nameUser={p.name} message={p.message} />);
    
    return (
       <div className={Style.body}>

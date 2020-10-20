@@ -1,15 +1,16 @@
-import React, { Component } from 'react'
+import React from 'react'
 import InfoSection from './InfoSection/InfoSection'
 import Posts from './Posts/Posts'
 import Style from './Profile.module.css'
 
-export default class Profile extends Component {
-   render() {
-      return (
-         <section className={Style.profile}>
-            <InfoSection name='Rustam Kurbonov' sity='Nizhny Novgorod' data ='25.03.1996'/>
-            <Posts />
-         </section>
-      )
-   }
+export default function Profile(props) {
+
+   let descripcionElement = props.descripcion.map(d => <InfoSection name={d.name} data={d.data} sity={d.sity} />);
+
+   return (
+      <section className={Style.profile}>
+         {descripcionElement}
+         <Posts posts={props.posts}/>
+      </section>
+   )
 }
