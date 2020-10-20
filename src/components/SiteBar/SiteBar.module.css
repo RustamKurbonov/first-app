@@ -7,13 +7,15 @@ height: 600px;
 .link {
    display: flex;
    flex-direction: column;
-   height: 25px;
+   height: 28px;
    justify-content: center;
    margin: 0px 0px 10px 0px;
    padding: 0px 0px 0px 15px;
+   border-radius: 5px;
 } 
 .link:hover {
    background-color: #d3d9de;
+   transition: all 500ms ease-out 100ms;
 }
 .link p {
    font-size: 18px;
@@ -22,4 +24,5 @@ height: 600px;
 }
 .link.active {
    background-color: #e2e6f0;
+   transition: all 200ms ease-out 100ms;
 } 
