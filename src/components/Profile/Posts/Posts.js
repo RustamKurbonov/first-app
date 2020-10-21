@@ -4,7 +4,7 @@ import Style from './Posts.module.css'
 
 export default function Posts(props) {
    
-   let postElement = props.posts.map(p => <Post nameUser={p.name} message={p.message} />);
+   let postElement = props.posts.posts.map(p => <Post nameUser={p.name} message={p.message} />);
    
    return (
       <div className={Style.body}>

@@ -20,11 +20,11 @@ const App = (props) => {
       <div className='wrapper'>
         <div className='container'>
           <Header />
-          <SiteBar />
+          <SiteBar state={props.state} />
           <div className='sectionContent'>
-            <Route path='/profile' render={() => <Profile posts={props.posts} descripcion={props.descripcion}/>}/>
+            <Route path='/profile' render={() => <Profile state={props.state} />}/>
             <Route path='/news' render={() => <News />}/>
-            <Route path='/message' render={() => <Message users={props.users} messangs={props.messangs}/>}/>
+            <Route path='/message' render={() => <Message state={props.state} />}/>
             <Route path='/communities' render={() => <Communities />} />
             <Route path='/friends' render={() => <Friends />} />
             <Route path='/music' render={() => <Music />} />

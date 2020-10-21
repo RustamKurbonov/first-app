@@ -1,8 +1,12 @@
 .body {
    grid-area: site-bar;
+   position: relative;
 }
 .menu {
-height: 600px;
+   position: fixed;
+   top: 80px;
+   height: 100%;
+   width: 200px;
 }
 .link {
    display: flex;
@@ -11,7 +15,7 @@ height: 600px;
    justify-content: center;
    margin: 0px 0px 10px 0px;
    padding: 0px 0px 0px 15px;
-   border-radius: 5px;
+   border-radius: 8px;
 } 
 .link:hover {
    background-color: #d3d9de;

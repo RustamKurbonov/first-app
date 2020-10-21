@@ -5,12 +5,12 @@ import Style from './Profile.module.css'
 
 export default function Profile(props) {
 
-   let descripcionElement = props.descripcion.map(d => <InfoSection name={d.name} data={d.data} sity={d.sity} />);
+   let descripcionElement = props.state.profilePage.descripcion.map(d => <InfoSection name={d.name} data={d.data} sity={d.sity} />);
 
    return (
       <section className={Style.profile}>
          {descripcionElement}
-         <Posts posts={props.posts}/>
+         <Posts posts={props.state.profilePage}/>
       </section>
    )
 }

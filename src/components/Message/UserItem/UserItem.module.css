@@ -4,7 +4,7 @@
 .user_navlink {
    display: flex;
    color: #000000;
-   border-radius: 5px;
+   border-radius: 8px;
    transition: all 200ms ease-out 100ms;
 }
 .user_navlink:hover {

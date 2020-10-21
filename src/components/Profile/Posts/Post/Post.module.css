@@ -4,6 +4,7 @@
    background-color: rgb(226, 240, 240);
    height: 150px;
    padding: 20px;
+   border-radius: 8px;
 }
 .icon{
    max-width: 70px;

@@ -4,9 +4,8 @@ import MessageList from './MessageList/MessageList'
 import UserItem from './UserItem/UserItem'
 
 export default function Message(props) {
-   
-   let usersElement = props.users.map(u => <UserItem name={u.name} id={u.id} />);
-   let massengElement = props.messangs.map(m => <MessageList name={m.name} message={m.messange} />);
+   let usersElement = props.state.messagePage.users.map(u => <UserItem name={u.name} id={u.id} />);
+   let massengElement = props.state.messagePage.messangs.map(m => <MessageList name={m.name} message={m.messange} />);
 
    return (
       <section className={Style.messages}>

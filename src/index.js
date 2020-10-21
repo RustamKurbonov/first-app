@@ -3,31 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-///
-let posts = [
-  { name: 'Alexey', message: 'Это я' },
-  { name: 'Andrey', message: 'Привет, это второй пост' },
-  { name: 'Dima', message: 'Еще один пост' }
-];
-let descripcion = [
-  { name: 'Rustam Kurbonov', data: '25.03.1996', sity: 'Nizhniy Novgorod '}
-]
-///
-let users = [
-  { name: 'Alexey', id: 1 },
-  { name: 'Dima', id: 2 },
-  { name: 'Ric', id: 3 }
-];
-let messangs = [
-  { name: 'Alexey', messange: 'Hi' },
-  { name: 'Me', messange: 'Hi!' },
-  { name: 'Alexey', messange: 'nkjn wenfjnlnf nvj nwoefnlnf' }
-];
-///
+import state from './Redux/state'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App posts={posts} users={users} messangs={messangs} descripcion={descripcion}/>
+    <App state={state} />
   </React.StrictMode>,
   document.getElementById('root')
 );
