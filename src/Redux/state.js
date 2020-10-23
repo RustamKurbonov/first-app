@@ -1,9 +1,9 @@
 let state = {
    profilePage: {
       posts: [
-         { name: 'Alexey', message: 'Это я' },
-         { name: 'Andrey', message: 'Привет, это второй пост' },
-         { name: 'Dima', message: 'Еще один пост' }
+         { id: 1, name: 'Alexey', message: 'Это я', like: 12},
+         { id: 2, name: 'Andrey', message: 'Привет, это второй пост', like: 122 },
+         { id: 3, name: 'Dima', message: 'Еще один пост', like: 1 }
       ],
       descripcion: [
          { name: 'Rustam Kurbonov', data: '25.03.1996', sity: 'Nizhniy Novgorod ' }
@@ -28,5 +28,15 @@ let state = {
          { name: 'Dima' }
       ]
    }
+}
+
+export let addPost = (postText) => {
+   let newPost = {
+      id: 5,
+      name: 'new',
+      message: postText,
+      like: 0
+   }
+   state.profilePage.posts.push(newPost);
 }
 export default state;

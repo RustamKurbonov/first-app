@@ -24,7 +24,7 @@
 }
 .user_name {
    display: flex;
-   font-size: 15px;
+   font-size: 18px;
    font-weight: 500;
    align-items: center;
 }
