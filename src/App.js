@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import './NullStyle.css';
 import SiteBar from './components/SiteBar/SiteBar';
@@ -22,7 +21,8 @@ const App = (props) => {
           <Header />
           <SiteBar state={props.state} />
           <div className='sectionContent'>
-            <Route path='/profile' render={() => <Profile state={props.state} />}/>
+            <Route path='/profile' render={() => <Profile state={props.state} addPost={props.addPost}
+              changeStateTextPost={props.changeStateTextPost}/>}/>
             <Route path='/news' render={() => <News />}/>
             <Route path='/message' render={() => <Message state={props.state} />}/>
             <Route path='/communities' render={() => <Communities />} />

@@ -1,16 +1,16 @@
 .body {
    display: flex;
    justify-content: left;
-   margin: 20px 0px 0px 0px;
+   margin: 12px 0px 0px 0px;
 }
 .container {
-   width: 720px;
+   width: 540px;
    background-color: #ffffff;
    border-radius: 8px;
    padding: 25px;
 }
 .container h2 {
-   font-size: 25px;
+   font-size: 20px;
    font-weight: 600;
    border-bottom: 1px solid #edeef0;
    padding: 0px 0px 20px 0px;
@@ -19,7 +19,6 @@
    margin: 15px 0px 0px 0px;
    padding: 10px;
    border: 1px solid #2a5885;
-   font-size: 18px;
    display: block;
    width: 100%;
    height: 48px;
@@ -31,7 +30,6 @@
    display: block;
    background-color: #4a76a8;
    color: #ffffff;
-   font-size: 16px;
    height: 35px;
    width: 120px;
 }

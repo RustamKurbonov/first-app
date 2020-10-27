@@ -1,4 +1,6 @@
-let state = {
+import {rerender} from './../rerender';
+
+export let state = {
    profilePage: {
       posts: [
          { id: 1, name: 'Alexey', message: 'Это я', like: 12},
@@ -7,7 +9,8 @@ let state = {
       ],
       descripcion: [
          { name: 'Rustam Kurbonov', data: '25.03.1996', sity: 'Nizhniy Novgorod ' }
-      ]
+      ],
+      valueTextInput: ''
    },
    messagePage: {
       users: [
@@ -18,6 +21,8 @@ let state = {
       messangs: [
          { name: 'Alexey', messange: 'Hi' },
          { name: 'Me', messange: 'Hi!' },
+         { name: 'Alexey', messange: 'nkjn wenfjnlnf nvj nwoefnlnf' },
+         { name: 'Alexey', messange: 'nkjn wenfjnlnf nvj nwoefnlnf' },
          { name: 'Alexey', messange: 'nkjn wenfjnlnf nvj nwoefnlnf' }
       ]
    },
@@ -30,4 +35,20 @@ let state = {
    }
 }
 
-export default state;
+export let addPost = () => {
+   let newPost = { 
+      id: 5, 
+      name: 'Alexey',
+      message: state.profilePage.valueTextInput, 
+      like: 0 };
+
+      state.profilePage.posts.push(newPost);
+      state.profilePage.valueTextInput = '';
+      rerender(state);
+   }
+
+export let changeStateTextPost = (text) => {
+   state.profilePage.valueTextInput = text;
+
+   rerender(state);
+}

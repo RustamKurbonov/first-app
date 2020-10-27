@@ -4,7 +4,7 @@
 }
 .menu {
    position: fixed;
-   top: 80px;
+   top: 58px;
    height: 100%;
    width: 200px;
 }
@@ -13,7 +13,7 @@
    flex-direction: column;
    height: 28px;
    justify-content: center;
-   margin: 0px 0px 10px 0px;
+   margin: 0px 0px 5px 0px;
    padding: 0px 0px 0px 15px;
    border-radius: 8px;
 } 
@@ -22,7 +22,6 @@
    transition: all 500ms ease-out 100ms;
 }
 .link p {
-   font-size: 18px;
    font-weight: 500;
    color: #4189c8;
 }

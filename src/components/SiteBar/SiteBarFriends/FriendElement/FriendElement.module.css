@@ -7,7 +7,7 @@
 .image{
    border: 1px solid #2a5885;
    border-radius: 50%;
-   max-width: 50px;
+   max-width: 40px;
    margin: 0px auto;
 }
 .image img {
@@ -16,5 +16,6 @@
 }
 .name{
    margin: 5px 0px 0px 0px;
+   font-size: 12px;
    overflow: hidden;
 }

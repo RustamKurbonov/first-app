@@ -1,6 +1,6 @@
 .body{
    position: fixed;
-   top: 380px; 
+   top: 310px; 
    height: 100%;
    width: 200px;
    border-top: 1px solid #2a5885;
@@ -9,7 +9,6 @@
 .title{
    padding: 0px 0px 0px 15px;
    margin: 15px 0px;
-   font-size: 18px;
    font-weight: 500;
    color: #4189c8;
 }
@@ -18,5 +17,5 @@
    grid-template-columns: 33.333% 33.333% 33.333%;
    background-color: #ffffff;
    border-radius: 8px;
-   min-height: 79px;
+   min-height: 70px;
 }

@@ -18,7 +18,7 @@ body {
    background-color: #edeef0;
 }
 .container{
-   max-width: 1250px; 
+   max-width: 980px; 
    margin: 0px auto;
    width: 100%;
    display: grid;
@@ -26,9 +26,9 @@ body {
       "header header"
       "site-bar profile"
    ;
-   grid-template-rows: 60px 1fr;
+   grid-template-rows: 45px 1fr;
    grid-template-columns: 200px 1fr;
-   gap: 20px;
+   gap: 12px;
 }
 .wrapper{
    width: 100%;

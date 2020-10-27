@@ -2,21 +2,24 @@
    display: grid;
    grid-template-columns: 3fr 8fr;
    gap: 10px;
-   height: 700px;
+   max-height: 100vh;
 }
 .users_list {
    background-color: #ffffff;
    border-radius: 8px;
+   overflow: auto;
+   max-height: 555px;
 }
 .message_list {
    background-color: #ffffff;
    border-radius: 8px;
-   padding: 35px 15px;
+   padding: 20px 15px 20px 15px;
 }
 .message_tablo {
-   height: 540px; 
    border-bottom: 1px solid #edeef0;
    margin: 0px 0px 15px 0px;
+   max-height: 400px;
+   overflow: auto;
 }
 .text {
    height: 50px;
@@ -26,7 +29,6 @@
    width: 100%;
    resize: none;
    overflow : auto;
-   font-size: 18px;
 }
 .bottom {
    height: 100px;
@@ -36,7 +38,6 @@
    display: block;
    background-color: #4a76a8;
    color: #ffffff;
-   font-size: 16px;
    height: 35px;
    width: 120px;
 }
