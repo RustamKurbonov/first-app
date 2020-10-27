@@ -22,7 +22,7 @@ const App = (props) => {
           <Header />
           <SiteBar state={props.state} />
           <div className='sectionContent'>
-            <Route path='/profile' render={() => <Profile state={props.state} addPost={props.addPost}/>}/>
+            <Route path='/profile' render={() => <Profile state={props.state} />}/>
             <Route path='/news' render={() => <News />}/>
             <Route path='/message' render={() => <Message state={props.state} />}/>
             <Route path='/communities' render={() => <Communities />} />

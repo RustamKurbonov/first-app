@@ -10,7 +10,7 @@ export default function Profile(props) {
    return (
       <section className={Style.profile}>
          {descripcionElement}
-         <Posts posts={props.state.profilePage} addPost={props.addPost}/>
+         <Posts posts={props.state.profilePage} />
       </section>
    )
 }

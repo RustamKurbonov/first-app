@@ -7,11 +7,6 @@ export default function Posts(props) {
    let postElement = props.posts.posts.map(p => <Post nameUser={p.name} message={p.message} />);
 
    let newPostElement = React.createRef();
-
-   let addPost = () => {
-      let text = newPostElement.current.value;
-      props.addPost(text);
-   }
    
    return (
       <div className={Style.body}>
@@ -19,10 +14,10 @@ export default function Posts(props) {
             <h2>Мои новости</h2>
             <div className={Style.top}>
                <textarea ref={newPostElement} placeholder="Что нового?" cols="30" rows="5" className={Style.text}></textarea>
-               <button onClick={addPost} className={Style.btn}>Добавить пост</button>
+               <button className={Style.btn}>Добавить пост</button>
             </div>
             <div className={Style.bottom}>
-               { postElement}
+               {postElement}
             </div>
          </div>
       </div>
