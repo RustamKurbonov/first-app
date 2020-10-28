@@ -1,3 +1,8 @@
+const createTypeAddPost = () => 'ADD-POST';
+const createTypeChengeTextPost = () => 'CHANGE-TEXT-POST';
+const createTypeAddMessage = () => 'ADD-MESSAGE';
+const createTypeChengeTextMessage = () => 'CHANGE-TEXT-MESSAGE';
+
 export let store = {
    _state: {
       profilePage: {
@@ -18,12 +23,13 @@ export let store = {
             { name: 'Ric', id: 3 }
          ],
          messangs: [
-            { name: 'Alexey', messange: 'Hi' },
-            { name: 'Me', messange: 'Hi!' },
-            { name: 'Alexey', messange: 'nkjn wenfjnlnf nvj nwoefnlnf' },
-            { name: 'Alexey', messange: 'nkjn wenfjnlnf nvj nwoefnlnf' },
-            { name: 'Alexey', messange: 'nkjn wenfjnlnf nvj nwoefnlnf' }
-         ]
+            { name: 'Alexey', message: 'Hi' },
+            { name: 'Me', message: 'Hi!' },
+            { name: 'Alexey', message: 'nkjn wenfjnlnf nvj nwoefnlnf' },
+            { name: 'Alexey', message: 'nkjn wenfjnlnf nvj nwoefnlnf' },
+            { name: 'Alexey', message: 'nkjn wenfjnlnf nvj nwoefnlnf' }
+         ],
+         valueTextMessage: ''
       },
       siteBarPage: {
          friends: [
@@ -33,27 +39,51 @@ export let store = {
          ]
       }
    },
-   getState(){
-      return this._state;
-   },
    _callSubscriber() {
    },
+
    subscride(observer) {
       this._callSubscriber = observer;
    },
-   addPost() {
-      let newPost = {
-         id: 5,
-         name: 'Alexey',
-         message: this._state.profilePage.valueTextInput,
-         like: 0
-      };
-      this._state.profilePage.posts.push(newPost);
-      this._state.profilePage.valueTextInput = '';
-      this._callSubscriber(this._state);
+   getState(){
+      return this._state;
    },
-   changeStateTextPost(text){
-      this._state.profilePage.valueTextInput = text;
-      this._callSubscriber(this._state);
+
+   dispatch(action) {
+      if (action.type === createTypeAddPost()){
+         let newPost = {
+            id: 5,
+            name: 'Alexey',
+            message: this._state.profilePage.valueTextInput,
+            like: 0
+         };
+
+         if (newPost.message !== ''){
+            this._state.profilePage.posts.push(newPost);
+            this._state.profilePage.valueTextInput = '';
+            this._callSubscriber(this._state);
+         }
+      } else if (action.type === createTypeChengeTextPost()){
+         this._state.profilePage.valueTextInput = action.newText;
+         this._callSubscriber(this._state);
+      } else if (action.type === createTypeAddMessage()){
+         let newMessage = {
+            name: 'Me',
+            message: this._state.messagePage.valueTextMessage
+         }
+
+         if(newMessage.message !== ''){
+            this._state.messagePage.messangs.push(newMessage);
+            this._state.messagePage.valueTextMessage = '';
+            this._callSubscriber(this._state);
+         }
+      } else if (action.type === createTypeChengeTextMessage()){
+         this._state.messagePage.valueTextMessage = action.message;
+         this._callSubscriber(this._state);
+      }
    }
 }
+export const createActionAddPost = () => ({ type: createTypeAddPost() });
+export const createActionChengeTextPost = (text) => ({ type: createTypeChengeTextPost(), newText: text });
+export const createActionAddMessage = () => ({ type: createTypeAddMessage() });
+export const createActionChengeTextMessage = (text) => ({ type: createTypeChengeTextMessage(), message: text });

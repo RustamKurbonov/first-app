@@ -1,6 +1,7 @@
-import React from 'react'
-import Post from './Post/Post'
-import Style from './Posts.module.css'
+import React from 'react';
+import Post from './Post/Post';
+import Style from './Posts.module.css';
+import { createActionAddPost, createActionChengeTextPost } from './../../../Redux/store';
 
 export default function Posts(props) {
 
@@ -9,11 +10,11 @@ export default function Posts(props) {
    let newPostElement = React.createRef();
 
    let textButton = () => {
-      props.addPost();
+      props.dispatch(createActionAddPost());
    }
    let changeTextPost = () => {
       let text = newPostElement.current.value;
-      props.changeStateTextPost(text);
+      props.dispatch(createActionChengeTextPost(text));
    }
    return (
       <div className={Style.body}>

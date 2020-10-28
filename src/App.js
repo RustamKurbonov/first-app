@@ -21,10 +21,9 @@ const App = (props) => {
           <Header />
           <SiteBar state={props.state} />
           <div className='sectionContent'>
-            <Route path='/profile' render={() => <Profile state={props.state} addPost={props.addPost}
-              changeStateTextPost={props.changeStateTextPost}/>}/>
+            <Route path='/profile' render={() => <Profile state={props.state} dispatch={props.dispatch} />}/>
             <Route path='/news' render={() => <News />}/>
-            <Route path='/message' render={() => <Message state={props.state} />}/>
+            <Route path='/message' render={() => <Message state={props.state} dispatch={props.dispatch} />}/>
             <Route path='/communities' render={() => <Communities />} />
             <Route path='/friends' render={() => <Friends />} />
             <Route path='/music' render={() => <Music />} />

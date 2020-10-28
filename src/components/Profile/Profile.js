@@ -12,7 +12,7 @@ export default function Profile(props) {
       <section className={Style.profile}>
          {descripcionElement}
          <Posts posts={props.state.profilePage} valueTextInput={props.state.profilePage.valueTextInput} 
-            addPost={props.addPost} changeStateTextPost={props.changeStateTextPost}/>
+            dispatch={props.dispatch} />
       </section>
    )
 }
