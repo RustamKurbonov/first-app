@@ -6,6 +6,7 @@ export default class Video extends Component {
       return (
          <div>
             Video
+            Video
          </div>
       )
    }
