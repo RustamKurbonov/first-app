@@ -1,0 +1,21 @@
+.body{
+   position: fixed;
+   top: 310px; 
+   height: 100%;
+   width: 200px;
+   border-top: 1px solid #2a5885;
+   padding: 0px 0px 20px 0px;
+}
+.title{
+   padding: 0px 0px 0px 15px;
+   margin: 15px 0px;
+   font-weight: 500;
+   color: #4189c8;
+}
+.items{
+   display: grid;
+   grid-template-columns: 33.333% 33.333% 33.333%;
+   background-color: #ffffff;
+   border-radius: 8px;
+   min-height: 70px;
+}

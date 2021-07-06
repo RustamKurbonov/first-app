@@ -1,0 +1,21 @@
+.item{
+   display: block;
+   max-width: 70px;
+   text-align: center;
+   margin: 5px 0px;
+}
+.image{
+   border: 1px solid #2a5885;
+   border-radius: 50%;
+   max-width: 40px;
+   margin: 0px auto;
+}
+.image img {
+   border-radius: 50%;
+   max-width: 100%;
+}
+.name{
+   margin: 5px 0px 0px 0px;
+   font-size: 12px;
+   overflow: hidden;
+}

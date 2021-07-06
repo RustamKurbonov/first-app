@@ -1,0 +1,43 @@
+.messages {
+   display: grid;
+   grid-template-columns: 3fr 8fr;
+   gap: 10px;
+   max-height: 100vh;
+}
+.users_list {
+   background-color: #ffffff;
+   border-radius: 8px;
+   overflow: auto;
+   max-height: 555px;
+}
+.message_list {
+   background-color: #ffffff;
+   border-radius: 8px;
+   padding: 20px 15px 20px 15px;
+}
+.message_tablo {
+   border-bottom: 1px solid #edeef0;
+   margin: 0px 0px 15px 0px;
+   max-height: 400px;
+   overflow: auto;
+}
+.text {
+   height: 50px;
+   padding: 10px;
+   border: 1px solid #2a5885;
+   display: block;
+   width: 100%;
+   resize: none;
+   overflow : auto;
+}
+.bottom {
+   height: 100px;
+}
+.btn {
+   margin: 10px 0px 0px 0px;
+   display: block;
+   background-color: #4a76a8;
+   color: #ffffff;
+   height: 35px;
+   width: 120px;
+}

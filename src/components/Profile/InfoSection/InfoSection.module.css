@@ -1,0 +1,45 @@
+.info {
+   display: grid;
+   grid-template-columns: 2fr 5fr;
+   gap: 12px;
+}
+.descripcion {
+   padding: 25px;
+   background-color: #fff;
+   flex: 1 1 auto;
+   border-radius: 8px;
+}
+.name {
+   font-size: 20px;
+   font-weight: 600;
+   border-bottom: 1px solid #edeef0;
+   padding: 0px 0px 20px 0px;
+}
+.data_of_birth {
+   margin: 20px 0px 10px 0px;
+   display: flex;
+   color: #2a5885;
+}
+.data_of_birth p {
+   flex: 0 0 180px;
+}
+.sity {
+   margin: 15px 0px;
+   display: flex;
+   color: #2a5885;
+}
+.sity p {
+   flex: 0 0 180px;
+}
+.icon {
+   max-width: 280px;
+   max-height: 320px;
+   background-color: #fff;
+   border-radius: 8px;
+   padding: 12px;
+}
+.icon img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}

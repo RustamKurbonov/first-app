@@ -1,0 +1,38 @@
+.post{
+   margin: 12px 0px 0px 0px;
+   display: flex;
+   background-color: rgb(226, 240, 240);
+   height: 110px;
+   padding: 20px;
+   border-radius: 8px;
+}
+.icon{
+   max-width: 50px;
+}
+.icon img {
+   max-width: 100%;
+}
+.body{
+   padding: 0px 0px 0px 15px;
+   display: block;
+   width: 100%;
+}
+.text{
+   padding: 8px 0px 8px 0px;
+   border-top: 1px solid #98bbdf;
+   border-bottom: 1px solid#98bbdf;
+}
+.name{
+   font-size: 16px;
+   font-weight: 600;
+   margin: 0px 0px 5px 0px;
+}
+.name a {
+   color: #000;
+}
+.like{
+   margin: 5px 0px 0px 0px;
+}
+.btn{
+   font-weight: 500;
+}
