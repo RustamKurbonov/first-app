@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-import Style from './Photos.module.css'
+import React from 'react'
+//import Style from './Photos.module.css'
 
-export default class Photos extends Component {
-   render() {
-      return (
-         <div>
-            Photos
-         </div>
-      )
-   }
+const Photos = () => {
+   return (
+      <div>
+         Photos
+      </div>
+   )
 }
+
+export default Photos;

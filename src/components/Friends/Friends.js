@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-import Style from './Friends.module.css'
+import React from 'react'
+//import Style from './Friends.module.css'
 
-export default class Friends extends Component {
-   render() {
-      return (
-         <div>
-            Friends
-         </div>
-      )
-   }
+const Friends = () => {
+   return (
+      <div>
+         Friends
+      </div>
+   )
 }
+
+export default Friends;

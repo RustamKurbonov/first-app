@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-import Style from './News.module.css'
+import React from 'react'
+//import Style from './News.module.css'
 
-export default class News extends Component {
-   render() {
-      return (
-         <div>
-            News
-         </div>
-      )
-   }
+const News = () => {
+   return (
+      <div>
+         News
+      </div>
+   )
 }
+
+export default News;

@@ -5,15 +5,13 @@ import { createActionAddPost, createActionChengeTextPost } from './../../../Redu
 
 export default function Posts(props) {
 
-   let postElement = props.posts.posts.map(p => <Post nameUser={p.name} message={p.message} />);
-
-   let newPostElement = React.createRef();
+   let postElement = props.posts.posts.map(p => <Post key={p.id} nameUser={p.name} message={p.message} like={p.like} />);
 
    let textButton = () => {
       props.dispatch(createActionAddPost());
    }
-   let changeTextPost = () => {
-      let text = newPostElement.current.value;
+   let changeTextPost = (e) => {
+      let text = e.target.value;
       props.dispatch(createActionChengeTextPost(text));
    }
    return (
@@ -21,7 +19,7 @@ export default function Posts(props) {
          <div className={Style.container}>
             <h2>Мои новости</h2>
             <div className={Style.top}>
-               <textarea onChange={changeTextPost} ref={newPostElement} placeholder="Что нового?" cols="30" rows="5" className={Style.text} 
+               <textarea onChange={changeTextPost} placeholder="Что нового?" cols="30" rows="5" className={Style.text} 
                   value={props.valueTextInput}/>
                <button onClick={textButton} className={Style.btn}>Добавить пост</button>
             </div>

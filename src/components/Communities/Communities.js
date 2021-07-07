@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-import Style from './Communities.module.css'
+import React from 'react'
+//import Style from './Communities.module.css'
 
-export default class Communities extends Component {
-   render() {
-      return (
-         <div>
-            Communities
-         </div>
-      )
-   }
+const Communities = () => {
+   return (
+      <div>
+         Communities
+      </div>
+   )
 }
+
+export default Communities

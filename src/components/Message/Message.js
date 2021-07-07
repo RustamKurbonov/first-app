@@ -5,16 +5,15 @@ import UserItem from './UserItem/UserItem';
 import { createActionAddMessage, createActionChengeTextMessage } from './../../Redux/store';
 
 export default function Message(props) {
-   let usersElement = props.state.messagePage.users.map(u => <UserItem name={u.name} id={u.id} />);
-   let massengElement = props.state.messagePage.messangs.map(m => <MessageList name={m.name} message={m.message} />);
-
-   let textInput = React.createRef();
+   let usersElement = props.state.messagePage.users.map(u => <UserItem key={u.id} name={u.name} id={u.id} />);
+   let massengElement = props.state.messagePage.messangs.map(m => <MessageList key={m.id} name={m.name} message={m.message} />);
 
    let addMessage = () => {
       props.dispatch(createActionAddMessage());
    }
-   let changeMessageText = () => {
-      let text = textInput.current.value;
+
+   let changeMessageText = (e) => {
+      let text = e.target.value;
       props.dispatch(createActionChengeTextMessage(text));
    }
 
@@ -28,7 +27,7 @@ export default function Message(props) {
                {massengElement}
             </div>
             <div className={Style.bottom}>
-               <textarea onChange={changeMessageText} ref={textInput} className={Style.text} 
+               <textarea onChange={changeMessageText} className={Style.text} 
                   value={props.state.messagePage.valueTextMessage} placeholder="Введите сообщение" cols="20" rows="5"></textarea>
                <button onClick={addMessage} className={Style.btn}>Отправить</button>
             </div>

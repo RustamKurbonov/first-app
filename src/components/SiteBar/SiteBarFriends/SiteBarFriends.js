@@ -5,7 +5,7 @@ import FriendElement from './FriendElement/FriendElement'
 
 export default function SiteBarFriends(props) {
    let friengElement = props.friends.map( f =>
-      <FriendElement name={f.name} />  );
+      <FriendElement key={f.id} name={f.name} />  );
    return (
       <article className={Style.body}>
             <NavLink to='/friends' className={Style.link}>

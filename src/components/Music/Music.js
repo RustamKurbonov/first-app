@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-import Style from './Music.module.css'
+import React from 'react'
+//import Style from './Music.module.css'
 
-export default class Music extends Component {
-   render() {
-      return (
-         <div>
-            Music
-         </div>
-      )
-   }
+const Music = () => {
+   return (
+      <div>
+         Music
+      </div>
+   )
 }
+
+export default Music;

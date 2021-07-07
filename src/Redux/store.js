@@ -3,6 +3,11 @@ const createTypeChengeTextPost = () => 'CHANGE-TEXT-POST';
 const createTypeAddMessage = () => 'ADD-MESSAGE';
 const createTypeChengeTextMessage = () => 'CHANGE-TEXT-MESSAGE';
 
+export const createActionAddPost = () => ({ type: createTypeAddPost() });
+export const createActionChengeTextPost = (text) => ({ type: createTypeChengeTextPost(), newText: text });
+export const createActionAddMessage = () => ({ type: createTypeAddMessage() });
+export const createActionChengeTextMessage = (text) => ({ type: createTypeChengeTextMessage(), message: text });
+
 export let store = {
    _state: {
       profilePage: {
@@ -12,30 +17,30 @@ export let store = {
             { id: 3, name: 'Dima', message: 'Еще один пост', like: 1 }
          ],
          descripcion: [
-            { name: 'Rustam Kurbonov', data: '25.03.1996', sity: 'Nizhniy Novgorod ' }
+            { id:0, name: 'Rustam Kurbonov', data: '25.03.1996', sity: 'Nizhniy Novgorod ' }
          ],
          valueTextInput: ''
       },
       messagePage: {
          users: [
-            { name: 'Alexey', id: 1 },
-            { name: 'Dima', id: 2 },
-            { name: 'Ric', id: 3 }
+            { id: 0, name: 'Alexey' },
+            { id: 1, name: 'Dima' },
+            { id: 2, name: 'Ric' }
          ],
          messangs: [
-            { name: 'Alexey', message: 'Hi' },
-            { name: 'Me', message: 'Hi!' },
-            { name: 'Alexey', message: 'nkjn wenfjnlnf nvj nwoefnlnf' },
-            { name: 'Alexey', message: 'nkjn wenfjnlnf nvj nwoefnlnf' },
-            { name: 'Alexey', message: 'nkjn wenfjnlnf nvj nwoefnlnf' }
+            { id: 0, name: 'Alexey', message: 'Hi' },
+            { id: 1, name: 'Me', message: 'Hi!' },
+            { id: 2, name: 'Alexey', message: 'nkjn wenfjnlnf nvj nwoefnlnf' },
+            { id: 3, name: 'Alexey', message: 'nkjn wenfjnlnf nvj nwoefnlnf' },
+            { id: 4, name: 'Alexey', message: 'nkjn wenfjnlnf nvj nwoefnlnf' }
          ],
          valueTextMessage: ''
       },
       siteBarPage: {
          friends: [
-            { name: 'Alexey' },
-            { name: 'Andrey' },
-            { name: 'Dima' }
+            { id: 0, name: 'Alexey' },
+            { id: 1, name: 'Andrey' },
+            { id: 2, name: 'Dima' }
          ]
       }
    },
@@ -64,9 +69,12 @@ export let store = {
             this._callSubscriber(this._state);
          }
       } else if (action.type === createTypeChengeTextPost()){
+
          this._state.profilePage.valueTextInput = action.newText;
          this._callSubscriber(this._state);
+
       } else if (action.type === createTypeAddMessage()){
+
          let newMessage = {
             name: 'Me',
             message: this._state.messagePage.valueTextMessage
@@ -77,13 +85,12 @@ export let store = {
             this._state.messagePage.valueTextMessage = '';
             this._callSubscriber(this._state);
          }
+
       } else if (action.type === createTypeChengeTextMessage()){
+
          this._state.messagePage.valueTextMessage = action.message;
          this._callSubscriber(this._state);
+         
       }
    }
 }
-export const createActionAddPost = () => ({ type: createTypeAddPost() });
-export const createActionChengeTextPost = (text) => ({ type: createTypeChengeTextPost(), newText: text });
-export const createActionAddMessage = () => ({ type: createTypeAddMessage() });
-export const createActionChengeTextMessage = (text) => ({ type: createTypeChengeTextMessage(), message: text });

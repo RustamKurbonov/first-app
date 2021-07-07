@@ -6,7 +6,7 @@ import Style from './Profile.module.css'
 export default function Profile(props) {
 
    let descripcionElement = props.state.profilePage.descripcion.map(d => 
-      <InfoSection name={d.name} data={d.data} sity={d.sity} />);
+      <InfoSection key={d.id} name={d.name} data={d.data} sity={d.sity} />);
 
    return (
       <section className={Style.profile}>
