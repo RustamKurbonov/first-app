@@ -1,7 +1,7 @@
 import React from 'react';
 import Post from './Post/Post';
 import Style from './Posts.module.css';
-import { createActionAddPost, createActionChengeTextPost } from './../../../Redux/store';
+import { createActionAddPost, createActionChengeTextPost } from './../../../Redux/profileReducer';
 
 export default function Posts(props) {
 

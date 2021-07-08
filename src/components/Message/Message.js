@@ -2,7 +2,7 @@ import React from 'react';
 import Style from './Message.module.css';
 import MessageList from './MessageList/MessageList';
 import UserItem from './UserItem/UserItem';
-import { createActionAddMessage, createActionChengeTextMessage } from './../../Redux/store';
+import { createActionAddMessage, createActionChengeTextMessage } from './../../Redux/messageReducer';
 
 export default function Message(props) {
    let usersElement = props.state.messagePage.users.map(u => <UserItem key={u.id} name={u.name} id={u.id} />);

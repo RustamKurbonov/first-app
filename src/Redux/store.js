@@ -1,12 +1,5 @@
-const createTypeAddPost = () => 'ADD-POST';
-const createTypeChengeTextPost = () => 'CHANGE-TEXT-POST';
-const createTypeAddMessage = () => 'ADD-MESSAGE';
-const createTypeChengeTextMessage = () => 'CHANGE-TEXT-MESSAGE';
-
-export const createActionAddPost = () => ({ type: createTypeAddPost() });
-export const createActionChengeTextPost = (text) => ({ type: createTypeChengeTextPost(), newText: text });
-export const createActionAddMessage = () => ({ type: createTypeAddMessage() });
-export const createActionChengeTextMessage = (text) => ({ type: createTypeChengeTextMessage(), message: text });
+import profileReducer from './profileReducer';
+import messageReducer from './messageReducer';
 
 export let store = {
    _state: {
@@ -17,7 +10,7 @@ export let store = {
             { id: 3, name: 'Dima', message: 'Еще один пост', like: 1 }
          ],
          descripcion: [
-            { id:0, name: 'Rustam Kurbonov', data: '25.03.1996', sity: 'Nizhniy Novgorod ' }
+            { id: 0, name: 'Rustam Kurbonov', data: '25.03.1996', sity: 'Nizhniy Novgorod ' }
          ],
          valueTextInput: ''
       },
@@ -50,47 +43,15 @@ export let store = {
    subscride(observer) {
       this._callSubscriber = observer;
    },
-   getState(){
+   getState() {
       return this._state;
    },
 
    dispatch(action) {
-      if (action.type === createTypeAddPost()){
-         let newPost = {
-            id: 5,
-            name: 'Alexey',
-            message: this._state.profilePage.valueTextInput,
-            like: 0
-         };
 
-         if (newPost.message !== ''){
-            this._state.profilePage.posts.push(newPost);
-            this._state.profilePage.valueTextInput = '';
-            this._callSubscriber(this._state);
-         }
-      } else if (action.type === createTypeChengeTextPost()){
+      this._state.profilePage = profileReducer(action, this._state.profilePage);
+      this._state.messagePage = messageReducer(action, this._state.messagePage);
 
-         this._state.profilePage.valueTextInput = action.newText;
-         this._callSubscriber(this._state);
-
-      } else if (action.type === createTypeAddMessage()){
-
-         let newMessage = {
-            name: 'Me',
-            message: this._state.messagePage.valueTextMessage
-         }
-
-         if(newMessage.message !== ''){
-            this._state.messagePage.messangs.push(newMessage);
-            this._state.messagePage.valueTextMessage = '';
-            this._callSubscriber(this._state);
-         }
-
-      } else if (action.type === createTypeChengeTextMessage()){
-
-         this._state.messagePage.valueTextMessage = action.message;
-         this._callSubscriber(this._state);
-         
-      }
+      this._callSubscriber(this._state);
    }
 }
