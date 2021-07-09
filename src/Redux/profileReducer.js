@@ -6,9 +6,9 @@ export const createActionChengeTextPost = (text) => ({ type: createTypeChengeTex
 
 let initialState = {
     posts: [
-        { id: 1, name: 'Alexey', message: 'Это я', like: 12 },
-        { id: 2, name: 'Andrey', message: 'Привет, это второй пост', like: 122 },
-        { id: 3, name: 'Dima', message: 'Еще один пост', like: 1 }
+        { id: 0, name: 'Alexey', message: 'Это я', like: 12 },
+        { id: 1, name: 'Andrey', message: 'Привет, это второй пост', like: 122 },
+        { id: 2, name: 'Dima', message: 'Еще один пост', like: 1 }
      ],
      descripcion: [
         { id: 0, name: 'Rustam Kurbonov', data: '25.03.1996', sity: 'Nizhniy Novgorod ' }
