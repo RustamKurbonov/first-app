@@ -1,27 +1,19 @@
 import React from 'react';
 import Post from './Post/Post';
 import Style from './Posts.module.css';
-import { createActionAddPost, createActionChengeTextPost } from './../../../Redux/profileReducer';
 
-export default function Posts(props) {
+const Posts = props => {
 
-   let postElement = props.posts.posts.map(p => <Post key={p.id} nameUser={p.name} message={p.message} like={p.like} />);
+   let postElement = props.posts.map(p => <Post key={p.id} nameUser={p.name} message={p.message} like={p.like} />);
 
-   let textButton = () => {
-      props.dispatch(createActionAddPost());
-   }
-   let changeTextPost = (e) => {
-      let text = e.target.value;
-      props.dispatch(createActionChengeTextPost(text));
-   }
    return (
       <div className={Style.body}>
          <div className={Style.container}>
             <h2>Мои новости</h2>
             <div className={Style.top}>
-               <textarea onChange={changeTextPost} placeholder="Что нового?" cols="30" rows="5" className={Style.text} 
+               <textarea onChange={props.onChengeTextArea} placeholder="Что нового?" cols="30" rows="5" className={Style.text} 
                   value={props.valueTextInput}/>
-               <button onClick={textButton} className={Style.btn}>Добавить пост</button>
+               <button onClick={props.onClickButtonAddPost} className={Style.btn}>Добавить пост</button>
             </div>
             <div className={Style.bottom}>
                {postElement}
@@ -31,3 +23,4 @@ export default function Posts(props) {
    )
 }
 
+export default Posts;

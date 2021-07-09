@@ -1,7 +1,7 @@
 import React from 'react'
 import Style from './InfoSection.module.css'
 
-export default function InfoSection(props) {
+const InfoSection = props => {
    
    return (
       <div className={Style.info}>
@@ -22,3 +22,5 @@ export default function InfoSection(props) {
       </div>
    )
 }
+
+export default InfoSection;

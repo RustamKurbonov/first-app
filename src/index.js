@@ -7,7 +7,7 @@ import 'font-awesome/css/font-awesome.min.css';
 
 export let rerender = (state) => {
    ReactDOM.render(
-      <App state={state} dispatch={store.dispatch.bind(store)} />,
+      <App store={store} />,
       document.getElementById('root')
    );
 } 

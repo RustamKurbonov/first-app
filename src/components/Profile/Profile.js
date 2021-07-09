@@ -3,16 +3,23 @@ import InfoSection from './InfoSection/InfoSection'
 import Posts from './Posts/Posts'
 import Style from './Profile.module.css'
 
-export default function Profile(props) {
-
-   let descripcionElement = props.state.profilePage.descripcion.map(d => 
-      <InfoSection key={d.id} name={d.name} data={d.data} sity={d.sity} />);
-
+const Profile = props => {
+   
    return (
       <section className={Style.profile}>
-         {descripcionElement}
-         <Posts posts={props.state.profilePage} valueTextInput={props.state.profilePage.valueTextInput} 
-            dispatch={props.dispatch} />
+         <InfoSection
+            name={props.name} 
+            data={props.data} 
+            sity={props.sity} 
+         />
+         <Posts 
+            posts={props.posts} 
+            valueTextInput={props.onValueTextInput}
+            onClickButtonAddPost = {props.onClickButtonAddPost}
+            onChengeTextArea = {props.onChengeTextArea}
+         />
       </section>
    )
 }
+
+export default Profile;

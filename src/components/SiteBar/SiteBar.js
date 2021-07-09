@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import Style from './SiteBar.module.css'
 import SiteBarFriends from './SiteBarFriends/SiteBarFriends'
 
-export default function SiteBar(props) {
+const SiteBar = props => {
    return (
       <aside className={Style.body}>
          <nav className={Style.menu}>
@@ -31,8 +31,9 @@ export default function SiteBar(props) {
                </NavLink>
             </div>
          </nav>
-         <SiteBarFriends friends={props.state.siteBarPage.friends} />
+         <SiteBarFriends friends={props.friends} />
       </aside>
    )
 }
 
+export default SiteBar;

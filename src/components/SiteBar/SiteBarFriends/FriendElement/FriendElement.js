@@ -1,7 +1,7 @@
 import React from 'react'
 import Style from './FriendElement.module.css'
 
-export default function FriendElement(props) {
+const FriendElement = props => {
    return (
       <div className={Style.item}>
          <div className={Style.image}>
@@ -13,3 +13,5 @@ export default function FriendElement(props) {
       </div>
    )
 }
+
+export default FriendElement;

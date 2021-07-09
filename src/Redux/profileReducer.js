@@ -10,9 +10,11 @@ let initialState = {
         { id: 1, name: 'Andrey', message: 'Привет, это второй пост', like: 122 },
         { id: 2, name: 'Dima', message: 'Еще один пост', like: 1 }
      ],
-     descripcion: [
-        { id: 0, name: 'Rustam Kurbonov', data: '25.03.1996', sity: 'Nizhniy Novgorod ' }
-     ],
+     descripcion: {
+        name: 'Rustam Kurbonov',
+        data: '25.03.1996',
+        sity: 'Nizhniy Novgorod'
+     },
      valueTextInput: ''
 }
 

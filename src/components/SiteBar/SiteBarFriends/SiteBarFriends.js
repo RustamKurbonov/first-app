@@ -3,9 +3,12 @@ import { NavLink } from 'react-router-dom'
 import Style from './SiteBarFriends.module.css'
 import FriendElement from './FriendElement/FriendElement'
 
-export default function SiteBarFriends(props) {
+const SiteBarFriends = props => {
+
    let friengElement = props.friends.map( f =>
-      <FriendElement key={f.id} name={f.name} />  );
+      <FriendElement key={f.id} name={f.name} />  
+   );
+
    return (
       <article className={Style.body}>
             <NavLink to='/friends' className={Style.link}>
@@ -17,3 +20,5 @@ export default function SiteBarFriends(props) {
       </article>
    )
 }
+
+export default SiteBarFriends;

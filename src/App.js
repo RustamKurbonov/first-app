@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
 import './NullStyle.css';
-import SiteBar from './components/SiteBar/SiteBar';
+import SiteBarContainer from './components/SiteBar/SiteBarContainer';
 import Header from './components/Header/Header';
-import Profile from './components/Profile/Profile';
-import Message from './components/Message/Message';
+import ProfileContainer from './components/Profile/ProfileContainer';
+import MessageContainer from './components/Message/MessageContainer';
 import News from './components/News/News'
 import Communities from './components/Communities/Communities'
 import Friends from './components/Friends/Friends'
@@ -19,11 +19,11 @@ const App = (props) => {
       <div className='wrapper'>
         <div className='container'>
           <Header />
-          <SiteBar state={props.state} />
+          <SiteBarContainer store={props.store} />
           <div className='sectionContent'>
-            <Route path='/profile' render={() => <Profile state={props.state} dispatch={props.dispatch} />}/>
+            <Route path='/profile' render={() => <ProfileContainer store={props.store} />}/>
             <Route path='/news' render={() => <News />}/>
-            <Route path='/message' render={() => <Message state={props.state} dispatch={props.dispatch} />}/>
+            <Route path='/message' render={() => <MessageContainer store={props.store} />}/>
             <Route path='/communities' render={() => <Communities />} />
             <Route path='/friends' render={() => <Friends />} />
             <Route path='/music' render={() => <Music />} />
